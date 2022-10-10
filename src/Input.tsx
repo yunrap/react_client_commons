@@ -5,13 +5,7 @@
 import "./App.scss";
 import { NumericFormat } from "react-number-format";
 
-import React, {
-  MutableRefObject,
-  RefObject,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { useState } from "react";
 
 export default function Input() {
   const prefix = "p";
@@ -61,6 +55,9 @@ export default function Input() {
       <button disabled={!input.isActive} onClick={onReset}>
         ok
       </button>
+      <p>
+        ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+      </p>
       <div>
         포인트
         <NumericFormat
@@ -71,8 +68,6 @@ export default function Input() {
           onFocus={resetInputPoint}
         />
       </div>
-      <b>값: </b>
-      이름 (닉네임)
     </div>
   );
 }
