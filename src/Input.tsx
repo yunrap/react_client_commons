@@ -1,6 +1,7 @@
 /*
 1. onChange시 자리수체크 => onKeyUp으로 자리수체크가 동작먹힘
 */
+import "./App.scss";
 
 import React, {
   MutableRefObject,
@@ -14,6 +15,7 @@ export default function Input() {
   const initialState = {
     name: "",
     pwd: "",
+    point: "0p",
     isActive: false,
   };
 
@@ -53,8 +55,10 @@ export default function Input() {
       <div>
         포인트
         <input
+          className="data-suffix"
           name="point"
           type="text"
+          value={input.point}
           placeholder="비밀번호"
           onKeyUp={checkValid}
           onChange={handleInputValue}
