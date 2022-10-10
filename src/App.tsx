@@ -1,7 +1,6 @@
 import React from "react";
 import CheckboxTest from "./CheckboxTest";
 import Input from "./Input";
-
 function App() {
   return (
     <>

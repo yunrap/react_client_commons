@@ -1,7 +1,9 @@
 /*
-1. onChange시 자리수체크 => onKeyUp으로 자리수체크가 동작먹힘
+1. [button] 자리수버튼활성화 : onChange시 자리수체크 => onKeyUp으로 자리수체크가 동작먹힘
+2. [input] 동적포인트문구  : NumericFormat npm 설치
 */
 import "./App.scss";
+import { NumericFormat } from "react-number-format";
 
 import React, {
   MutableRefObject,
@@ -12,6 +14,8 @@ import React, {
 } from "react";
 
 export default function Input() {
+  const prefix = "p";
+
   const initialState = {
     name: "",
     pwd: "",
@@ -34,6 +38,11 @@ export default function Input() {
     setInput({ ...input, [name]: value });
   };
 
+  const resetInputPoint = () => {
+    console.log(2);
+    setInput({ ...input, point: "p" });
+  };
+
   return (
     <div>
       <input
@@ -54,18 +63,16 @@ export default function Input() {
       </button>
       <div>
         포인트
-        <input
-          className="data-suffix"
-          name="point"
-          type="text"
+        <NumericFormat
+          displayType={"input"}
+          suffix={"p"}
           value={input.point}
-          placeholder="비밀번호"
-          onKeyUp={checkValid}
           onChange={handleInputValue}
+          onFocus={resetInputPoint}
         />
-        <b>값: </b>
-        이름 (닉네임)
       </div>
+      <b>값: </b>
+      이름 (닉네임)
     </div>
   );
 }
