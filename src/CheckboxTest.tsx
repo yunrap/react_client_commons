@@ -2,7 +2,7 @@ import React, { ChangeEvent, EventHandler, useState } from "react";
 import { useMemo } from "react";
 import Checkbox from "./Checkbox";
 
-interface Data {
+export interface Data {
   name: string;
   order: number;
   checked: boolean;

@@ -1,3 +1,5 @@
+// 체큽박스 공통컴포넌트
+
 import React, { ChangeEventHandler, useState } from "react";
 
 interface CheckboxType {

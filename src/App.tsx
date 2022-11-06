@@ -1,6 +1,6 @@
 import React from "react";
 import CheckboxTest from "./CheckboxTest";
-import Input from "./Input";
+import Input from "./adminRegister/Input";
 function App() {
   return (
     <>
