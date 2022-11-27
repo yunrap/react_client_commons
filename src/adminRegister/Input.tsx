@@ -65,6 +65,7 @@ export default function Input() {
   const handleInputValue = (e: any) => {
     const { value, name } = e.target;
     setInput({ ...input, [name]: value });
+    console.log(input);
   };
 
   const resetInputPoint = () => {
